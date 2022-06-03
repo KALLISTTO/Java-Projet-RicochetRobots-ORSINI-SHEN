@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="isep.jfx.MainController">
+   <children>
+      <GridPane>
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="statusLabel" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="800.0" text="Label">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <HBox>
+         <children>
+            <VBox prefHeight="640.0" prefWidth="191.0">
+                  <ChoiceBox fx:id="playerTurn" onAction="#setPlayerTurn" prefWidth="200.0" value="Choisir joueur">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </ChoiceBox>
+                  <TextField fx:id="predictionTf" prefWidth="150">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Button fx:id="confirmPredictionButton" onAction="#confirmPrediction" prefWidth="200.0" text="Valider ">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+               <Separator prefHeight="6.0" prefWidth="146.0" />
+                  <Label fx:id="printScore" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                <Label fx:id="printCount" prefWidth="200.0">
+                    <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </VBox.margin>
+                </Label>
+                <Button fx:id="restartButton" onAction="#restart" prefWidth="200.0" text="Restart">
+                  <VBox.margin>
+                     <Insets top="440.0" />
+                  </VBox.margin></Button>
+                <VBox.margin>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                </VBox.margin>
+
+            </VBox>
+            <GridPane fx:id="boardPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="640.0">
+               <columnConstraints>
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+               </rowConstraints>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin></GridPane>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="10.0" right="20.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>
